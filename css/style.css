@@ -1,0 +1,201 @@
+
+body{
+	font-family: "FontinSans_Cyrillic_I_46b";
+}
+.navbar-nav{
+	float: none;
+	width: 51%;
+    margin: 0 auto;
+}
+.navbar-nav li{
+	display: inline-block;
+	text-transform: uppercase;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus{
+	color: #fff;
+	background-color: transparent;
+}
+.navbar-default{
+	background-color: #245580;
+	border-color: transparent;
+	background-image: none;
+}
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .active > a{
+	background-image: none;
+}
+
+.navbar-default .navbar-nav > li > a{
+	color: #fff;
+	font-family: "Rounds Black";
+}
+.header{
+	background-image: url(../img/Vin.jpg);
+	background-size: cover;
+	
+}
+.myName{
+	color: #fff;
+	font-family: "Rounds Black";
+	font-size: 80px;
+	text-align: center;
+	line-height: 1.3;
+}
+.header-text{
+	color: #fff;
+	font-family: "FontinSans_Cyrillic_I_46b";
+	font-size: 30px;
+	width: 907px;
+	margin: 0 auto;
+	text-align: center;
+}
+.header-line{
+	width: 300px;
+	height: 2px;
+	background-color: #fff;
+	margin: 0 auto;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	display: none;
+}
+.social-network{
+	color: white;
+    font-size: 38px;
+    text-align: center;
+}
+.social-network i{
+	padding-right: 30px;
+}
+.social-network .fa-skype{
+	padding-right: 0;
+}
+.social-network a{
+	color: #fff;
+}
+.navbar-default .navbar-toggle{
+	border-width: medium;
+}
+.navbar-toggle .icon-bar{
+	height: 3px;
+}
+.social-network i:hover{
+	color: lightblue;
+	transition: 1s;
+}
+.header-text{
+	display: none;
+}
+.fadeIn{
+	display: block;
+	animation-duration: 2s;
+}
+.rotateInUpRight{
+	display: block;
+}
+.fa-facebook,.fa-twitter,.fa-google-plus,.fa-linkedin,.fa-instagram,.fa-dribbble,.fa-skype{
+	display: none;
+}
+.zoomIn{
+	display: inline-block;
+}
+.avatar{
+	border-radius: 50%;
+}
+.second{
+	background: url(../img/about.jpg);
+	padding-top: 40px;
+	color: #fff;
+	background-attachment: fixed;
+	margin-bottom: 40px;
+}
+.aboutMe{
+	font-family: "Rounds Black";
+	font-size: 20px;
+}
+.aboutMeText{
+	font-size: 17px;
+}
+.modal-body{
+	color: #000;
+}
+.third-title{
+	font-family: "Rounds Black";
+	
+	font-size: 20px;
+}
+.third-right {
+    margin-top: 0;
+    font-weight: bold;
+}
+.second-bottom {
+    margin-top: -43px;
+}
+.show-intita {
+    margin-bottom: 29px;
+}
+.third-text{
+	font-size: 17px;
+	color: grey;
+}
+.third-sub{
+	font-style: italic;
+}
+.third-main-text{
+	margin-bottom: 35px;
+}
+.third-line{
+	height: 1px;
+	width: 100%;
+	background-color: #c1c1c1;
+	margin-bottom: 35px;
+}
+.third-title-line1{
+	height: 1px;
+    width: 46%;
+    background: #245580;
+}
+.third-title-line2{
+	height: 1px;
+    width: 25%;
+    background: #245580;
+}
+.third-title-line3{
+	height: 1px;
+    width: 28%;
+    background: #245580;
+}
+.progress-name{
+	font-family: "Rounds Black";
+}
+.fourth-title{
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.third{
+	margin-bottom: 40px;
+}
+.fourth-subSection{
+	margin-bottom: 30px;
+}
+.fourth{
+	background-color: #ebeeee;
+	padding-bottom: 40px;
+}
+.fifth-title{
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.video{
+	width: 50%;
+}
+#nav{
+	display: none;
+}
+.navbar-default .navbar-brand{
+	color: white;
+}
+.fourth-title,.fifth-title{
+	font-family: "Rounds Black";
+	font-size: 20px;
+}
