@@ -1,12 +1,25 @@
 //Header height
 var header = $('#header');
-
-function headerSize(userHeight){
-	header.css("height",userHeight);
-};
-if($(window).height()>=500){
-	var userHeight = $(window).height();
+var userHeight;
+function headerHeight(){
+	if ($(window).width()/$(window).height()>1.75) {
+		$("#header-video").css("display","block");
+		$("#header").css("backgroundImage","none");
+		$("#header").css("height",$(window).height());
+		userHeight = $("#header-video").css("height");
+	}
+	else{
+		$("#header-video").css("display","none");
+		$("#header").css("backgroundImage","url(img/Vin.jpg)");	
+		var userHeight = $(window).height();
+		$("#header").css("height",$(window).height());
+		userHeight = $("#header").css("height");
+	}
 }
+ 
+// function headerSize(userHeight){
+// 	header.css("height",userHeight);
+// };
 
 
 //Position myName
@@ -69,24 +82,16 @@ function socialNetworkAnimate(socialId){
 	});
 };
 
-//Skills start run
-// function skillsRun(){
-// 	bodyTag.onscroll = function(){
-// 		//var skillsPosition = $("#skills").offset().top;
-		
-		
-// 	};
-// }
-
-
 
 //All function
 $(document).ready(function(){
+	headerHeight();
 	checkScroll();
-	//skillsRun();	
-	if($(window).height()>=500){
-		headerSize(userHeight);
-	};
+	//$("#header-video").css("width",$(window).width());
+	// if($(window).height()>=500){
+	// 	var userHeight = $("#header-video").css("height");
+	// 	headerSize(userHeight);
+	// };
 	positionMyName(userHeight);
 	socialNetworkAnimate("fa-facebook");
 	socialNetworkAnimate("fa-twitter");
@@ -133,14 +138,15 @@ $(document).ready(function(){
 	};
 	$(function(){
 		$(window).resize(function(){
-			if($(window).height()>=500)
-			{
-				var userHeight = $(window).height();
-				headerSize(userHeight);
-			}
+			// if($(window).height()>=500)
+			// {
+			// 	//var userHeight = $(window).height();
+			// 	var userHeight = $("#header-video").css("height");
+				
+			// }
 			positionMyName(userHeight);
 			checkScroll();
-			//skillsRun();
+			headerHeight()
 		});
 	});
 });

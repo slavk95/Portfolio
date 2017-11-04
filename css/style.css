@@ -32,6 +32,7 @@ body{
 	background-image: url(../img/Vin.jpg);
 	background-size: cover;
 	
+	background-color: rgba(0,0,0,0.6);	
 }
 .myName{
 	color: #fff;
@@ -198,4 +199,13 @@ body{
 .fourth-title,.fifth-title{
 	font-family: "Rounds Black";
 	font-size: 20px;
+}
+.header-video{
+	width: 100%;
+	z-index: -999;
+	position: absolute;
+	height: auto;
+	top: 0;
+	left: 0;
+	display: none;
 }
