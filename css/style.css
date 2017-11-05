@@ -40,6 +40,7 @@ body{
 	font-size: 80px;
 	text-align: center;
 	line-height: 1.3;
+	margin-bottom: 0;
 }
 .header-text{
 	color: #fff;
@@ -96,7 +97,10 @@ body{
 	display: none;
 }
 .zoomIn{
-	display: inline-block;
+	display: inline-block !important;
+}
+.flash{
+	display: block !important;
 }
 .avatar{
 	border-radius: 50%;
@@ -132,6 +136,12 @@ body{
 }
 .show-intita {
     margin-bottom: 29px;
+    color: white;
+    background: none;
+    border-width: medium;
+    border-color: white;
+    display: none;
+    animation-duration: 3s;
 }
 .third-text{
 	font-size: 17px;
@@ -208,4 +218,7 @@ body{
 	top: 0;
 	left: 0;
 	display: none;
+}
+#mySurName{
+	margin: 0;
 }

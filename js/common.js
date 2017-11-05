@@ -7,6 +7,7 @@ function headerHeight(){
 		$("#header").css("backgroundImage","none");
 		$("#header").css("height",$(window).height());
 		userHeight = $("#header-video").css("height");
+		
 	}
 	else{
 		$("#header-video").css("display","none");
@@ -23,15 +24,22 @@ function headerHeight(){
 
 
 //Position myName
-function positionMyName(userHeight){
-	$('#myName').css('margin-top',userHeight/2-220);
+var realUserHeight = $(window).height();
+function positionMyName(realUserHeight){
+	if ($(window).height()>500) {
+		$('#myName').css('margin-top',realUserHeight/2-250);	
+	}
+	else{
+		$('#myName').css('margin-top',realUserHeight/2-150);	
+	}
+	
 }
 
 var bodyTag = document.getElementById("body");
 function checkScroll(){
 	bodyTag.onscroll=function(){
 		// Show and Hide menu
-		if(window.pageYOffset>=userHeight){
+		if(window.pageYOffset>=realUserHeight){
 			
 			$("#nav").css("display","block");
 		}
@@ -87,12 +95,14 @@ function socialNetworkAnimate(socialId){
 $(document).ready(function(){
 	headerHeight();
 	checkScroll();
+	
+	var realUserHeight = $(window).height();
 	//$("#header-video").css("width",$(window).width());
 	// if($(window).height()>=500){
 	// 	var userHeight = $("#header-video").css("height");
 	// 	headerSize(userHeight);
 	// };
-	positionMyName(userHeight);
+	positionMyName(realUserHeight);
 	socialNetworkAnimate("fa-facebook");
 	socialNetworkAnimate("fa-twitter");
 	socialNetworkAnimate("fa-google-plus");
@@ -124,6 +134,9 @@ $(document).ready(function(){
 										$('#fa-dribbble').addClass('animated zoomIn');
 										setTimeout(function(){
 											$('#fa-skype').addClass('animated zoomIn');
+											setTimeout(function(){
+												$('#intitaShowInformation').addClass('animated flash');
+											},800)
 										},800)
 									},800)
 								},800)
@@ -144,9 +157,11 @@ $(document).ready(function(){
 			// 	var userHeight = $("#header-video").css("height");
 				
 			// }
-			positionMyName(userHeight);
+			var realUserHeight = $(window).height();
+			positionMyName(realUserHeight);
 			checkScroll();
-			headerHeight()
+			headerHeight();
+			
 		});
 	});
 });

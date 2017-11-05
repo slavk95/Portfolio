@@ -82,4 +82,17 @@
 	.social-network i {
 	    padding-right: 15px;
 	}
+
+}
+@media screen and (max-height: 500px){
+	.myName{
+		font-size: 30px;
+	}
+	.header-text{
+		font-size: 21px;
+	}
+	.social-network{
+		font-size: 21px;
+	}
+
 }
