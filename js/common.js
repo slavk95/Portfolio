@@ -35,6 +35,16 @@ function positionMyName(realUserHeight){
 	
 }
 
+function sizeFourthItem(){
+	if($(window).width()<500){
+		// for (key in $(".fourth .col-md-3")){
+			$(".fourth .col-md-3").removeClass("col-xs-6").addClass("col-xs-12");
+	}
+	else{
+			$(".fourth .col-md-3").removeClass("col-xs-12").addClass("col-xs-6");
+	}
+}
+var flag = 1;
 var bodyTag = document.getElementById("body");
 function checkScroll(){
 	bodyTag.onscroll=function(){
@@ -45,7 +55,18 @@ function checkScroll(){
 		}
 		else{
 			$("#nav").css("display","none");
+
 		}
+		// if (window.pageYOffset>=realUserHeight-500 && flag) {
+		// 	skillsBar(html, 0.9);
+		// 	skillsBar(css, 0.9);
+		// 	skillsBar(JS, 0.7);
+		// 	skillsBar(AngularJS, 0.25);
+		// 	skillsBar(PHP, 0.5);
+		// 	skillsBar(MySQL, 0.25);
+		// 	flag=0;
+		// }
+		
 		//Skills run
 		var htmlProgress = document.getElementById("htmlProgress");
 		var cssProgress = document.getElementById("cssProgress");
@@ -54,29 +75,29 @@ function checkScroll(){
 		var jqueryProgress = document.getElementById("jqueryProgress");
 		var phpProgress = document.getElementById("phpProgress");
 		var angularProgress = document.getElementById("angularProgress");
-		if (window.pageYOffset >= $("#skills").offset().top-200) {
+		// if (window.pageYOffset >= $("#skills").offset().top-200) {
 			
-			htmlProgress.style.width="95%";
-			cssProgress.style.width="85%";
-			jsProgress.style.width="75%";
-			bootstrapProgress.style.width="80%";
-			jqueryProgress.style.width="84%";
-			phpProgress.style.width="50%";
-			angularProgress.style.width="20%";
-		}
-		else
-		{
-			function setWidth(skill){
-				skill.style.width="0%";
-			}
-			setWidth(htmlProgress);
-			setWidth(cssProgress);
-			setWidth(jsProgress);
-			setWidth(bootstrapProgress);
-			setWidth(jqueryProgress);
-			setWidth(phpProgress);
-			setWidth(angularProgress);
-		}
+		// 	htmlProgress.style.width="95%";
+		// 	cssProgress.style.width="85%";
+		// 	jsProgress.style.width="75%";
+		// 	bootstrapProgress.style.width="80%";
+		// 	jqueryProgress.style.width="84%";
+		// 	phpProgress.style.width="50%";
+		// 	angularProgress.style.width="20%";
+		// }
+		// else
+		// {
+		// 	function setWidth(skill){
+		// 		skill.style.width="0%";
+		// 	}
+		// 	setWidth(htmlProgress);
+		// 	setWidth(cssProgress);
+		// 	setWidth(jsProgress);
+		// 	setWidth(bootstrapProgress);
+		// 	setWidth(jqueryProgress);
+		// 	setWidth(phpProgress);
+		// 	setWidth(angularProgress);
+		// }
 	};	
 };
 
@@ -95,7 +116,11 @@ function socialNetworkAnimate(socialId){
 $(document).ready(function(){
 	headerHeight();
 	checkScroll();
-	
+	sizeFourthItem();
+// 	if($(window).width()<500){
+// 	$(".fourth .col-md-3").removeClass("col-xs-6");
+// 	$(".fourth .col-md-3").addClass("col-xs-12");
+// }
 	var realUserHeight = $(window).height();
 	//$("#header-video").css("width",$(window).width());
 	// if($(window).height()>=500){
@@ -151,12 +176,8 @@ $(document).ready(function(){
 	};
 	$(function(){
 		$(window).resize(function(){
-			// if($(window).height()>=500)
-			// {
-			// 	//var userHeight = $(window).height();
-			// 	var userHeight = $("#header-video").css("height");
-				
-			// }
+			sizeFourthItem();
+			
 			var realUserHeight = $(window).height();
 			positionMyName(realUserHeight);
 			checkScroll();
@@ -230,3 +251,40 @@ client.getUserDetails(my_id).then(function(data)
         };  
     });
 });
+
+// function skillsBar(skillName, percent){
+// 	var bar = new ProgressBar.Circle(skillName, {
+// 	color: '#aaa',
+// 	// This has to be the same size as the maximum width to
+// 	// prevent clipping
+// 	strokeWidth: 4,
+// 	trailWidth: 1,
+// 	easing: 'easeInOut',
+// 	duration: 1400,
+// 	text: {
+// 		autoStyleContainer: false
+// 	},
+// 	from: { color: '#789cbb', width: 1 },
+// 	to: { color: '#245580', width: 4 },
+// 	// Set default step function for all animate calls
+// 	step: function(state, circle) {
+// 	circle.path.setAttribute('stroke', state.color);
+// 	circle.path.setAttribute('stroke-width', state.width);
+
+// 	var value = Math.round(circle.value() * 100);
+// 	if (value === 0) {
+// 	  circle.setText('');
+// 	} else {
+// 	  circle.setText(value);
+// 	}
+
+// 	}
+// 	});
+// 	bar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
+// 	bar.text.style.fontSize = '2rem';
+
+// 	bar.animate(percent);  // Number from 0.0 to 1.0	
+// }
+// $("#work1").hover(function(){
+// 	alert(1);
+// });

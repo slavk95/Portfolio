@@ -27,15 +27,15 @@
 	}
 	.navbar-nav{
 		font-size: 31px;
-    	height: 339px;
+    	height: 162px;
 	}
 	.navbar-default .navbar-collapse, .navbar-default .navbar-form{
 		background-color: rgba(0,0,0,0.7);
 		font-size: 20px;
 	}
-	.navbar-toggle{
+	/*.navbar-toggle{
 		margin-top: 40px;
-	}
+	}*/
 	.navbar-default .navbar-toggle {
 	    border-color: #fff;
 	}
@@ -95,4 +95,16 @@
 		font-size: 21px;
 	}
 
+}
+@media screen and (max-width: 500px){
+	.fourth-right-block{
+		float: none;
+	}
+	.black:hover{
+		
+	}
+	.black{
+		margin: 0 auto;
+		width: 60%;
+	}
 }
